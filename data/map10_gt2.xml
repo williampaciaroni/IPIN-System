@@ -1,0 +1,227 @@
+<map width="1.5245123e-37" depth="0">
+    <earthReg>
+        <correspondences/>
+    </earthReg>
+    <floors>
+        <floor atHeight="0" height="3" name="2_Floor">
+            <outline>
+                <polygon name="" method="0" outdoor="false">
+                    <point x="73.372002" y="89.473999"/>
+                    <point x="76.360001" y="82.169998"/>
+                    <point x="83.830002" y="73.040001"/>
+                    <point x="91.300003" y="70.550003"/>
+                    <point x="97.940002" y="69.720001"/>
+                    <point x="106.24" y="72.209999"/>
+                    <point x="113.71" y="77.190002"/>
+                    <point x="118.69" y="85.489998"/>
+                    <point x="162" y="81"/>
+                    <point x="210" y="70"/>
+                    <point x="212" y="97.599998"/>
+                    <point x="217" y="98"/>
+                    <point x="216" y="110"/>
+                    <point x="213.2" y="122.6"/>
+                    <point x="209" y="135"/>
+                    <point x="207.8" y="134.60001"/>
+                    <point x="200" y="152"/>
+                    <point x="166" y="133"/>
+                    <point x="164" y="136.2"/>
+                    <point x="138.8" y="120.8"/>
+                    <point x="140" y="119"/>
+                    <point x="116.2" y="107.07"/>
+                    <point x="109.56" y="114.54"/>
+                    <point x="99.599998" y="117.86"/>
+                    <point x="87.150002" y="116.2"/>
+                    <point x="78.849998" y="110.39"/>
+                    <point x="73.040001" y="99.599998"/>
+                </polygon>
+                <polygon name="" method="1" outdoor="false">
+                    <point x="98.106003" y="108.39801"/>
+                    <point x="94.952003" y="108.39801"/>
+                    <point x="92.461998" y="107.9"/>
+                    <point x="89.141998" y="106.406"/>
+                    <point x="86.818001" y="104.746"/>
+                    <point x="84.494003" y="102.09"/>
+                    <point x="82.667999" y="98.272003"/>
+                    <point x="84.328003" y="97.774002"/>
+                    <point x="83.996002" y="96.279999"/>
+                    <point x="82.169998" y="96.445999"/>
+                    <point x="82.004005" y="94.620003"/>
+                    <point x="82.169998" y="92.129997"/>
+                    <point x="82.834" y="89.473999"/>
+                    <point x="83.996002" y="87.150002"/>
+                    <point x="85.821999" y="84.825996"/>
+                    <point x="87.731003" y="83.166"/>
+                    <point x="89.806" y="81.672005"/>
+                    <point x="94.620003" y="80.178001"/>
+                    <point x="98.686996" y="80.261002"/>
+                    <point x="98.521004" y="81.589005"/>
+                    <point x="100.015" y="82.004005"/>
+                    <point x="100.513" y="80.510002"/>
+                    <point x="104.995" y="82.667999"/>
+                    <point x="110.39" y="92.129997"/>
+                    <point x="110.72201" y="93.790001"/>
+                    <point x="110.72201" y="95.615997"/>
+                    <point x="109.06201" y="95.532997"/>
+                    <point x="108.64701" y="97.193001"/>
+                    <point x="110.30701" y="97.608002"/>
+                    <point x="108.73" y="100.845"/>
+                    <point x="105.991" y="104.829"/>
+                    <point x="99.848999" y="100.679"/>
+                    <point x="96.861" y="102.588"/>
+                    <point x="97.442001" y="105.493"/>
+                </polygon>
+            </outline>
+            <obstacles>
+                <wall material="3" type="1" x1="69.886002" y1="91.963997" x2="77.356003" y2="92.295998" thickness="0.2"/>
+                <wall material="3" type="1" x1="77.356003" y1="92.295998" x2="77.522003" y2="97.276001" thickness="0.2"/>
+                <wall material="3" type="1" x1="77.522003" y1="97.276001" x2="74.202003" y2="97.608002" thickness="0.2"/>
+                <wall material="3" type="1" x1="74.202003" y1="97.608002" x2="75.364006" y2="101.924" thickness="0.2"/>
+                <wall material="3" type="1" x1="75.364006" y1="101.924" x2="77.190002" y2="105.742" thickness="0.2"/>
+                <wall material="3" type="1" x1="77.190002" y1="105.742" x2="79.181999" y2="108.564" thickness="0.2"/>
+                <wall material="3" type="1" x1="79.181999" y1="108.564" x2="81.007996" y2="110.224" thickness="0.2"/>
+                <wall material="3" type="1" x1="81.007996" y1="110.224" x2="82.336006" y2="111.386" thickness="0.2"/>
+                <wall material="3" type="1" x1="82.336006" y1="111.386" x2="84.162003" y2="109.06201" thickness="0.2"/>
+                <wall material="3" type="1" x1="84.162003" y1="109.06201" x2="81.672005" y2="106.57201" thickness="0.2"/>
+                <wall material="3" type="1" x1="81.672005" y1="106.57201" x2="79.348" y2="103.086" thickness="0.2"/>
+                <wall material="3" type="1" x1="79.348" y1="103.086" x2="78.352005" y2="100.928" thickness="0.2"/>
+                <wall material="3" type="1" x1="78.352005" y1="100.928" x2="75.364006" y2="101.924" thickness="0.2"/>
+                <wall material="3" type="1" x1="82.336006" y1="111.386" x2="84.660004" y2="113.046" thickness="0.2"/>
+                <wall material="3" type="1" x1="84.660004" y1="113.046" x2="87.150002" y2="114.374" thickness="0.2"/>
+                <wall material="3" type="1" x1="87.150002" y1="114.374" x2="89.972" y2="115.37" thickness="0.2"/>
+                <wall material="3" type="1" x1="89.972" y1="115.37" x2="92.793999" y2="116.034" thickness="0.2"/>
+                <wall material="3" type="1" x1="92.793999" y1="116.034" x2="95.781998" y2="116.2" thickness="0.2"/>
+                <wall material="3" type="1" x1="95.781998" y1="116.2" x2="98.603996" y2="116.2" thickness="0.2"/>
+                <wall material="3" type="1" x1="98.603996" y1="116.2" x2="102.588" y2="115.37" thickness="0.2"/>
+                <wall material="3" type="1" x1="102.588" y1="115.37" x2="105.244" y2="114.374" thickness="0.2"/>
+                <wall material="3" type="1" x1="105.244" y1="114.374" x2="107.40201" y2="113.21201" thickness="0.2"/>
+                <wall material="3" type="1" x1="107.40201" y1="113.21201" x2="109.56" y2="111.884" thickness="0.2"/>
+                <wall material="3" type="1" x1="109.56" y1="111.884" x2="111.55201" y2="110.224" thickness="0.2"/>
+                <wall material="3" type="1" x1="111.55201" y1="110.224" x2="113.37801" y2="108.39801" thickness="0.2"/>
+                <wall material="3" type="1" x1="113.37801" y1="108.39801" x2="114.87201" y2="106.406" thickness="0.2"/>
+                <wall material="3" type="1" x1="114.87201" y1="106.406" x2="115.536" y2="105.244" thickness="0.2"/>
+                <wall material="3" type="1" x1="115.536" y1="105.244" x2="112.88" y2="103.75" thickness="0.2"/>
+                <wall material="3" type="1" x1="112.88" y1="103.75" x2="114.54" y2="100.596" thickness="0.2"/>
+                <wall material="3" type="1" x1="114.54" y1="100.596" x2="115.204" y2="98.272003" thickness="0.2"/>
+                <wall material="3" type="1" x1="115.204" y1="98.272003" x2="115.536" y2="95.615997" thickness="0.2"/>
+                <wall material="3" type="1" x1="115.536" y1="95.615997" x2="118.524" y2="95.781998" thickness="0.2"/>
+                <wall material="3" type="1" x1="118.524" y1="95.781998" x2="118.026" y2="99.101997" thickness="0.2"/>
+                <wall material="3" type="1" x1="118.026" y1="99.101997" x2="117.196" y2="101.758" thickness="0.2"/>
+                <wall material="3" type="1" x1="117.196" y1="101.758" x2="115.536" y2="105.244" thickness="0.2"/>
+                <wall material="3" type="1" x1="118.35801" y1="91.134003" x2="115.37" y2="91.549004" thickness="0.2"/>
+                <wall material="3" type="1" x1="115.37" y1="91.549004" x2="114.62301" y2="88.311996" thickness="0.2"/>
+                <wall material="3" type="1" x1="114.62301" y1="88.311996" x2="113.79301" y2="86.070999" thickness="0.2"/>
+                <wall material="3" type="1" x1="113.79301" y1="86.070999" x2="111.96701" y2="83.083" thickness="0.2"/>
+                <wall material="3" type="1" x1="111.96701" y1="83.083" x2="114.54" y2="81.339996" thickness="0.2"/>
+                <wall material="3" type="1" x1="114.54" y1="81.339996" x2="116.53201" y2="84.825996" thickness="0.2"/>
+                <wall material="3" type="1" x1="116.53201" y1="84.825996" x2="117.52801" y2="87.482002" thickness="0.2"/>
+                <wall material="3" type="1" x1="117.52801" y1="87.482002" x2="118.35801" y2="91.134003" thickness="0.2"/>
+                <wall material="3" type="1" x1="114.54" y1="81.339996" x2="112.88" y2="79.181999" thickness="0.2"/>
+                <wall material="3" type="1" x1="112.88" y1="79.181999" x2="109.89201" y2="76.692001" thickness="0.2"/>
+                <wall material="3" type="1" x1="109.89201" y1="76.692001" x2="108.066" y2="79.181999" thickness="0.2"/>
+                <wall material="3" type="1" x1="108.066" y1="79.181999" x2="104.912" y2="77.190002" thickness="0.2"/>
+                <wall material="3" type="1" x1="104.912" y1="77.190002" x2="102.754" y2="76.360001" thickness="0.2"/>
+                <wall material="3" type="1" x1="102.754" y1="76.360001" x2="103.916" y2="73.704002" thickness="0.2"/>
+                <wall material="3" type="1" x1="103.916" y1="73.704002" x2="106.24" y2="74.534004" thickness="0.2"/>
+                <wall material="3" type="1" x1="106.24" y1="74.534004" x2="109.89201" y2="76.692001" thickness="0.2"/>
+                <wall material="3" type="1" x1="103.916" y1="73.704002" x2="98.272003" y2="72.043999" thickness="0.2"/>
+                <wall material="3" type="1" x1="98.272003" y1="72.043999" x2="93.790001" y2="72.043999" thickness="0.2"/>
+                <wall material="3" type="1" x1="93.790001" y1="72.043999" x2="90.802002" y2="72.542" thickness="0.2"/>
+                <wall material="3" type="1" x1="90.802002" y1="72.542" x2="88.146004" y2="73.372002" thickness="0.2"/>
+                <wall material="3" type="1" x1="88.146004" y1="73.372002" x2="85.157997" y2="74.866005" thickness="0.2"/>
+                <wall material="3" type="1" x1="85.157997" y1="74.866005" x2="82.169998" y2="76.858002" thickness="0.2"/>
+                <wall material="3" type="1" x1="82.169998" y1="76.858002" x2="79.846001" y2="79.348" thickness="0.2"/>
+                <wall material="3" type="1" x1="79.846001" y1="79.348" x2="77.854004" y2="81.837997" thickness="0.2"/>
+                <wall material="3" type="1" x1="77.854004" y1="81.837997" x2="77.356003" y2="82.501999" thickness="0.2"/>
+                <wall material="3" type="1" x1="77.356003" y1="82.501999" x2="79.181999" y2="83.664001" thickness="0.2"/>
+                <wall material="3" type="1" x1="79.181999" y1="83.664001" x2="76.858002" y2="88.643997" thickness="0.2"/>
+                <wall material="3" type="1" x1="76.858002" y1="88.643997" x2="74.866005" y2="87.980003" thickness="0.2"/>
+                <wall material="3" type="1" x1="74.866005" y1="87.980003" x2="74.617004" y2="89.058998" thickness="0.2"/>
+                <wall material="5" type="3" x1="98.935997" y1="80.012001" x2="94.620003" y2="79.846001" thickness="0.2"/>
+                <wall material="5" type="3" x1="94.620003" y1="79.846001" x2="92.129997" y2="80.178001" thickness="0.2"/>
+                <wall material="5" type="3" x1="92.129997" y1="80.178001" x2="89.639999" y2="81.174004" thickness="0.2"/>
+                <wall material="5" type="3" x1="89.639999" y1="81.174004" x2="87.316002" y2="82.667999" thickness="0.2"/>
+                <wall material="5" type="3" x1="87.316002" y1="82.667999" x2="85.323997" y2="84.660004" thickness="0.2"/>
+                <wall material="5" type="3" x1="85.323997" y1="84.660004" x2="83.498001" y2="87.150002" thickness="0.2"/>
+                <wall material="5" type="3" x1="83.498001" y1="87.150002" x2="82.501999" y2="89.307999" thickness="0.2"/>
+                <wall material="5" type="3" x1="82.501999" y1="89.307999" x2="81.837997" y2="91.632004" thickness="0.2"/>
+                <wall material="5" type="3" x1="81.837997" y1="91.632004" x2="81.672005" y2="93.956001" thickness="0.2"/>
+                <wall material="5" type="3" x1="81.672005" y1="93.956001" x2="81.672005" y2="95.615997" thickness="0.2"/>
+                <wall material="5" type="3" x1="81.672005" y1="95.615997" x2="82.004005" y2="96.778" thickness="0.2"/>
+                <wall material="3" type="1" x1="82.004005" y1="96.778" x2="82.004005" y2="96.778" thickness="0.2"/>
+                <wall material="5" type="3" x1="82.004005" y1="96.778" x2="83.498001" y2="96.445999" thickness="0.2"/>
+                <wall material="5" type="3" x1="83.498001" y1="96.445999" x2="83.830002" y2="97.774002" thickness="0.2"/>
+                <wall material="5" type="3" x1="82.336006" y1="98.106003" x2="83.664001" y2="101.26" thickness="0.2"/>
+                <wall material="5" type="3" x1="83.664001" y1="101.26" x2="85.157997" y2="103.418" thickness="0.2"/>
+                <wall material="5" type="3" x1="85.157997" y1="103.418" x2="86.818001" y2="105.244" thickness="0.2"/>
+                <wall material="5" type="3" x1="86.818001" y1="105.244" x2="89.141998" y2="106.904" thickness="0.2"/>
+                <wall material="5" type="3" x1="89.141998" y1="106.904" x2="91.797997" y2="108.066" thickness="0.2"/>
+                <wall material="5" type="3" x1="91.797997" y1="108.066" x2="94.288002" y2="108.564" thickness="0.2"/>
+                <wall material="5" type="3" x1="94.288002" y1="108.564" x2="96.445999" y2="108.73" thickness="0.2"/>
+                <wall material="5" type="3" x1="96.445999" y1="108.73" x2="98.272003" y2="108.564" thickness="0.2"/>
+                <wall material="5" type="3" x1="98.272003" y1="108.564" x2="97.276001" y2="102.588" thickness="0.2"/>
+                <wall material="5" type="3" x1="97.276001" y1="102.588" x2="99.765999" y2="100.928" thickness="0.2"/>
+                <wall material="5" type="3" x1="99.765999" y1="100.928" x2="105.991" y2="105.244" thickness="0.2"/>
+                <wall material="5" type="3" x1="105.991" y1="105.244" x2="108.066" y2="102.92" thickness="0.2"/>
+                <wall material="5" type="3" x1="108.066" y1="102.92" x2="109.311" y2="100.762" thickness="0.2"/>
+                <wall material="5" type="3" x1="109.311" y1="100.762" x2="110.556" y2="97.276001" thickness="0.2"/>
+                <wall material="5" type="3" x1="108.979" y1="97.027" x2="109.22801" y2="95.698997" thickness="0.2"/>
+                <wall material="5" type="3" x1="109.22801" y1="95.698997" x2="110.971" y2="95.864998" thickness="0.2"/>
+                <wall material="5" type="3" x1="110.971" y1="95.864998" x2="110.88801" y2="92.295998" thickness="0.2"/>
+                <wall material="5" type="3" x1="98.603996" y1="81.589005" x2="99.931999" y2="81.921005" thickness="0.2"/>
+                <wall material="5" type="3" x1="99.931999" y1="81.921005" x2="100.43" y2="80.261002" thickness="0.2"/>
+                <wall material="5" type="3" x1="100.43" y1="80.261002" x2="103.003" y2="81.174004" thickness="0.2"/>
+                <wall material="5" type="3" x1="103.003" y1="81.174004" x2="105.244" y2="82.667999" thickness="0.2"/>
+            </obstacles>
+            <underlays>
+                <underlay x="0" y="0" sx="0.082999997" sy="0.082999997" name="" file="/mnt/Daten/Dokumente/programme/localization/maps/reykjavik/2_Floor_Small.png"/>
+            </underlays>
+            <pois/>
+            <gtpoints>
+                <gtpoint id="11" x="200" y="141" z="0"/>
+                <gtpoint id="6" x="202.60001" y="101.8" z="0"/>
+                <gtpoint id="5" x="202.40001" y="100.2" z="0"/>
+                <gtpoint id="3" x="180.60001" y="90.599998" z="0"/>
+                <gtpoint id="2" x="148.2" y="91.599998" z="0"/>
+                <gtpoint id="1" x="147.8" y="88.800003" z="0"/>
+                <gtpoint id="0" x="122.4" y="91.599998" z="0"/>
+                <gtpoint id="13" x="148" y="97" z="0"/>
+                <gtpoint id="4" x="180.60001" y="98.400002" z="0"/>
+                <gtpoint id="9" x="182" y="125.2" z="0"/>
+                <gtpoint id="8" x="186.8" y="105.4" z="0"/>
+                <gtpoint id="7" x="193" y="101.2" z="0"/>
+                <gtpoint id="10" x="203" y="133" z="0"/>
+            </gtpoints>
+            <accesspoints>
+                <accesspoint name="NUC 1" mac="38:de:ad:6d:77:25" x="145.40001" y="87.800003" z="2" mdl_txp="0" mdl_exp="0" mdl_waf="0"/>
+                <accesspoint name="NUC 8" mac="d0:c6:37:bc:6b:4b" x="200" y="98.099998" z="2" mdl_txp="0" mdl_exp="0" mdl_waf="0"/>
+                <accesspoint name="NUC 5" mac="d0:c6:37:bc:5c:41" x="165" y="97" z="2" mdl_txp="0" mdl_exp="0" mdl_waf="0"/>
+                <accesspoint name="NUC 3" mac="1c:1b:b5:ef:a2:9a" x="198" y="140.40001" z="2" mdl_txp="0" mdl_exp="0" mdl_waf="0"/>
+                <accesspoint name="NUC 7" mac="d0:c6:37:bc:77:ad" x="204.2" y="110.8" z="2" mdl_txp="0" mdl_exp="0" mdl_waf="0"/>
+                <accesspoint name="NUC 6" mac="d0:c6:37:bc:77:8a" x="178.7" y="105.6" z="2" mdl_txp="0" mdl_exp="0" mdl_waf="0"/>
+                <accesspoint name="NUC 2" mac="38:de:ad:6d:60:ff" x="185.5" y="118.4" z="2" mdl_txp="0" mdl_exp="0" mdl_waf="0"/>
+            </accesspoints>
+            <beacons>
+                <beacon name="Beacon 06" mac="CC:50:E3:95:BF:CA" major="" minor="" uuid="" x="198.60001" y="137.40001" z="2" mdl_txp="0" mdl_exp="2.6904931e-43" mdl_waf="0"/>
+                <beacon name="Beacon 21" mac="CC:50:E3:95:9C:CA" major="" minor="" uuid="" x="201.8" y="134" z="2" mdl_txp="0" mdl_exp="0" mdl_waf="0"/>
+                <beacon name="Beacon 26" mac="CC:50:E3:95:C7:9A" major="" minor="" uuid="" x="194.2" y="131.2" z="2" mdl_txp="0" mdl_exp="0" mdl_waf="0"/>
+                <beacon name="Beacon 16" mac="CC:50:E3:95:51:5A" major="" minor="" uuid="" x="183.40001" y="118.6" z="2" mdl_txp="0" mdl_exp="6.6283435e-38" mdl_waf="0"/>
+                <beacon name="Beacon 46" mac="CC:50:E3:95:45:06" major="" minor="" uuid="" x="187.40001" y="112.4" z="2" mdl_txp="6.0255834e-44" mdl_exp="6.1657132e-44" mdl_waf="6.3058431e-44"/>
+                <beacon name="Beacon 15" mac="CC:50:E3:95:F8:22" major="" minor="" uuid="" x="170" y="133" z="2" mdl_txp="1.2751816e-43" mdl_exp="1.2891946e-43" mdl_waf="1.3032076e-43"/>
+                <beacon name="Beacon 35" mac="CC:50:E3:95:F7:5A" major="" minor="" uuid="" x="177.60001" y="121" z="2" mdl_txp="0" mdl_exp="0" mdl_waf="0"/>
+                <beacon name="Beacon 23" mac="CC:50:E3:95:F1:42" major="" minor="" uuid="" x="184" y="109.3" z="2" mdl_txp="0" mdl_exp="0" mdl_waf="0"/>
+                <beacon name="Beacon 28" mac="CC:50:E3:95:F1:32" major="" minor="" uuid="" x="182" y="101" z="2" mdl_txp="0" mdl_exp="2.6904931e-43" mdl_waf="0"/>
+                <beacon name="Beacon 20" mac="CC:50:E3:95:4A:02" major="" minor="" uuid="" x="190.2" y="101.4" z="2" mdl_txp="7.0064923e-45" mdl_exp="2.6904931e-43" mdl_waf="0"/>
+                <beacon name="Beacon 4" mac="CC:50:E3:95:3B:C2" major="" minor="" uuid="" x="209.10001" y="101" z="2" mdl_txp="0" mdl_exp="2.6904931e-43" mdl_waf="0"/>
+                <beacon name="Beacon 2" mac="CC:50:E3:95:44:BA" major="" minor="" uuid="" x="204.3" y="106.3" z="2" mdl_txp="7.8681038e+34" mdl_exp="2.6904931e-43" mdl_waf="0"/>
+                <beacon name="Beacon 42" mac="CC:50:E3:96:05:26" major="" minor="" uuid="" x="202.2" y="119.6" z="2" mdl_txp="0" mdl_exp="2.6904931e-43" mdl_waf="0"/>
+                <beacon name="Beacon 48" mac="CC:50:E3:96:12:52" major="" minor="" uuid="" x="176.8" y="88.900002" z="2" mdl_txp="0" mdl_exp="2.6904931e-43" mdl_waf="0"/>
+                <beacon name="Beacon 14" mac="CC:50:E3:95:88:82" major="" minor="" uuid="" x="163" y="99.5" z="2" mdl_txp="0" mdl_exp="2.6904931e-43" mdl_waf="0"/>
+                <beacon name="Beacon 4" mac="CC:50:E3:95:3B:C2" major="" minor="" uuid="" x="144.90001" y="100" z="2" mdl_txp="0" mdl_exp="3.1389086e-43" mdl_waf="0"/>
+                <beacon name="Beacon 12" mac="CC:50:E3:95:3E:9A" major="" minor="" uuid="" x="127.9" y="90" z="2" mdl_txp="0" mdl_exp="2.6904931e-43" mdl_waf="0"/>
+            </beacons>
+            <fingerprints/>
+            <stairs/>
+            <elevators/>
+        </floor>
+    </floors>
+</map>
