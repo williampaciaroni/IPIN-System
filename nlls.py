@@ -23,7 +23,7 @@ def nlls(P, R, N=100, start=lls):
         try:
             S = inv((A.transpose().dot(A))).dot((A.transpose().dot(b)))
         except ZeroDivisionError:
-            return S # Give up with current result
+            return S
         e1, e2 = e2, residual(P, R, S)
         if e1 - e2 < 1e-5: return S
         iterations = iterations + 1

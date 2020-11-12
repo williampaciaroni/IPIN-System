@@ -12,12 +12,14 @@ import trilateration_test as trilateration
 import clustering as cluster
 from matplotlib.animation import FuncAnimation
 
+#Initializing variables
 beacons = []
 filtered_beacons = []
 time_beacons = []
 previous_ts = 0
 gamma = 2.3
 
+#Parsing of bluetooth beacons from XML
 def parse_beacons(xml_path):
     tree = ET.parse(xml_path)
     map = tree.getroot()
@@ -29,23 +31,22 @@ def parse_beacons(xml_path):
                         for beacon in outline:
                             beacons.append([(beacon.get('mac').replace(':', '')), float(beacon.get('x')), float(beacon.get('y'))])
 
+#Retuns distance using formula specified in the PDF
 def beacon_distance(rssi):
     return 10 ** ((-rssi - 56) / (10 * gamma))
 
+#Parse beacon and insert it into a dictionary
 def beacon_event(data):
     timestamp = data[0]
-    #Mac are 48 bit numbers
     mac = data[2]
-    #RSSI value
     rssi = data[3]
-    #TODO: No idea, is -2147483648 for Pixel3a? NO! It's a response given when tx is not calculated efficiently
-    #Transmit power, if available
     txPower = data[4]
     for i in beacons:
         if mac in i[0]:
             beac = {'beacon': i, 'time': int(float(timestamp)*1e-10),'distance':beacon_distance(int(rssi))}
             filtered_beacons.append(beac)
 
+#Parse Wifi FTM data, not used
 def wifi_ftm_event(data):
     #Was the measurement successful
     successful = data[2]
@@ -68,6 +69,7 @@ def wifi_ftm_event(data):
     else:
         attemps = 1
 
+#Parse csv file selecting only Bluetooth beacons and WiFi FTM readings
 def parse_csv(csv_path):
     with open(csv_path) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=';')
@@ -79,6 +81,7 @@ def parse_csv(csv_path):
             elif row[1] == '17':
                 wifi_ftm_event(row)
             
+#Check if time is inside the array
 def timeIsInVector(array,time):
     if len(array)==0:
         return -1
@@ -88,6 +91,7 @@ def timeIsInVector(array,time):
                 return a
         return -1
 
+#Group beacons with same timestamp
 def filterBeacons():      
     for f in filtered_beacons:
         index = timeIsInVector(time_beacons,f['time'])
@@ -98,14 +102,14 @@ def filterBeacons():
             time.append({'beacon':f['beacon'],'distance':f['distance']})
             time_beacons.append({'beacons':time,'time':f['time']})
 
+#Given a beacon array with same timestamp it checks if there are duplicates, 
+    #removes them and finally calculate the avg distance for each point
 def average_beacons(array):
     different = []
     final_points = []
-
     for a in array:
         if a['beacon'][0] not in different:
             different.append(a['beacon'][0])
-
     for d in different:
         distance = 0
         counter = 0
@@ -118,7 +122,7 @@ def average_beacons(array):
         final_points.append({'beacon':beacon,'distance':distance/counter})
     return final_points
 
-
+#Return positions and distances
 def position_distances(index):
     positions = []
     distances = []
@@ -129,6 +133,7 @@ def position_distances(index):
         positions.append(pos)
     return positions,distances
 
+#Using trilateration with MLE, it returns an array of points
 def points_mle():
     points = []
     for t in range(len(time_beacons)):
@@ -139,6 +144,7 @@ def points_mle():
             pass
     return points
 
+#Using trilateration without MLE, it returns an array of points
 def points_no_mle():
     points = []
     for t in range(len(time_beacons)):
@@ -149,12 +155,13 @@ def points_no_mle():
             pass
     return points
 
+#Using Clustering, it returns an array of points
 def points_clustering():
     points = []
     for t in range(len(time_beacons)):
         pos,dist = position_distances(t)
         try:
-            v = cluster.plot(np.array(pos),np.array(dist))
+            v = cluster.core(np.array(pos),np.array(dist))
             if v[0]!=0 and v[1]!=0:
                 points.append({'point':[v[0],v[1]],'time':time_beacons[t]['time']})
         except:
@@ -173,24 +180,28 @@ filterBeacons()
 ptrian = points_mle()
 ptrian_nomle = points_no_mle()
 pcluster = points_clustering()
-ppmle = []
 
+#------------------Trilateration with MLE---------------
+ppmle = []
+#Removes points that are not in the map
 for p in ptrian:
     if p['point'] is not None:
         if p['point'][0]>=0 and p['point'][0]<=220:
             if p['point'][1]>=60 and p['point'][1]<=155:
                 ppmle.append(p)
 
+#------------------Trilateration without MLE---------------
 ppnomle = []
-
+#Removes points that are not in the map
 for p in ptrian_nomle:
     if p['point'] is not None:
         if p['point'][0]>=0 and p['point'][0]<=220:
             if p['point'][1]>=60 and p['point'][1]<=155:
                 ppnomle.append(p)
 
+#------------------Clustering------------------------------
 ppcluster = []
-
+#Removes points that are not in the map
 for p in pcluster:
     if p['point'] is not None:
         if p['point'][0]>=0 and p['point'][0]<=220:
@@ -198,6 +209,8 @@ for p in pcluster:
                 ppcluster.append(p)
 
 prev_point = None
+
+#------------------ANIMATION FOR EACH METHOD----------------
 
 def animatemle(dot):
     global prev_point
@@ -226,12 +239,14 @@ def animatecluster(dot):
         mp.plt.plot([prev_point[0], d['point'][0]], [prev_point[1], d['point'][1]],color='green')
     prev_point = d['point']   
 
-#anim_mle = FuncAnimation(mp.fig, animatemle, interval=500, frames=len(ppmle)-1)
+#Call the method that you want to use
 
- 
-anim_no_mle = FuncAnimation(mp.fig, animatenomle, interval=500, frames=len(ppnomle)-1)
+anim_mle = FuncAnimation(mp.fig, animatemle, interval=500, frames=len(ppmle)-1)
+
+#anim_no_mle = FuncAnimation(mp.fig, animatenomle, interval=500, frames=len(ppnomle)-1)
 
 #anim_cluster = FuncAnimation(mp.fig, animatecluster, interval=500, frames=len(ppcluster)-1)
 
+#Show result
 mp.plt.draw()
 mp.plt.show()

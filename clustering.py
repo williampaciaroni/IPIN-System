@@ -4,34 +4,21 @@ import matplotlib.pyplot as plt
 import numpy as np
 from math import exp
 
-#figure, axes = plt.subplots()
-
-def distance(a,b):
-    x = (a['beacon'][1]-b['x'])**2
-    y = (a['beacon'][2]-b['y'])**2
-    dist = math.sqrt(x+y)
-    return dist
-
-def distancePoint(a,b):
-    x = (a['x']-b['x'])**2
-    y = (a['y']-b['y'])**2
-    dist = math.sqrt(x+y)
-    return dist
-
+#Returns intersections between 2 circles given the centers and radii
 def get_intersections(a, r1, b, r2):
     distance = np.linalg.norm(a-b)
-    
+
     #Case 1: they don't intersect since they are too far
     if distance > r1 + r2:
-        return None
+        return -1
     
     #Case 2: they don't intersect since one circle is contained inside the other
     if distance < abs(r1 - r2):
-        return None
+        return -2
     
     #Case 3: they intersect in infinite points since they are coincident
     if distance == 0 and r1 == r2:
-        return None
+        return 0
     
     #Case 4: they intersect in two points, which we will calculate
     x = (r1 ** 2 - r2 ** 2 + distance ** 2) / (distance * 2)
@@ -48,6 +35,7 @@ def get_intersections(a, r1, b, r2):
     
     return ({'x1': round(x4,5),'y1': round(y4,5),'x2':round(x5,5),'y2':round(y5,5)})
 
+#Returns an approximated intersection between 2 circles given the centers and radii
 def approximate(p1, r1, p2, r2):
     """Approximate a circle intersection point."""
     d = np.linalg.norm(p1-p2)
@@ -67,35 +55,16 @@ def approximate(p1, r1, p2, r2):
     # return middle of line between two nearest points as result 
     return n1 / 2 + n2 / 2
 
+#Remove duplicate from intersection in order to filter data 
 def filterdata(circles,distances,intersections):
-    inter = []
+    inter = intersections
     inte_not_dupl = []
-    for i in intersections:
-        counter = 0
-        for c in range(len(circles)):
-            if distances[c]>=np.linalg.norm(circles-i['p']):
-                counter+=1
-        if counter>=(1):
-            inter.append(i)
-        counter=0
     for e in inter:
         if e not in inte_not_dupl:
             inte_not_dupl.append(e)
     return inte_not_dupl
 
-def mean(arr):
-    summ = 0
-    for e in arr:
-        summ+=e
-    return summ/len(arr)
-        
-def sortdict(arr): 
-    n = len(arr) 
-    for i in range(n): 
-        for j in range(0, n-i-1): 
-            if arr[j]['m'] > arr[j+1]['m'] : 
-                arr[j], arr[j+1] = arr[j+1], arr[j] 
-
+#Returns the centroid using different weights for intersections and approximated ones
 def centroid(intersection):
     xw = 0
     yw = 0
@@ -106,28 +75,24 @@ def centroid(intersection):
         w+=k['w']
     return {'x':xw/w,'y':yw/w}
 
-def plot(positions,distances):
+#Core of clustering that returns the cluster point using previous functions
+def core(positions,distances):
     x = []
     y = []
     centroidcond = False
     inter = []
-
     for k in range(len(positions)):
         for j in range(len(positions)):
-            i = None
             i = get_intersections(positions[k], distances[k],positions[j],distances[j])
-            if i is None:
+            if i==-1 or i==-2:
                 i = approximate(positions[k],distances[k],positions[j],distances[j])
                 if i is not None:
                     inter.append({'p':[i[0],i[1]],'w':1})
+            elif i==0:
+                pass
             else:
                 inter.append({'p':[i['x1'],i['y1']],'w':3})
                 inter.append({'p':[i['x2'],i['y2']],'w':3})
-
     inter_filtered=filterdata(positions, distances, inter)
-
-    if len(inter_filtered)<=3:
-        centre = centroid(inter_filtered)
-    else:
-        centre = centroid(inter_filtered)
+    centre = centroid(inter_filtered)
     return [centre['x'],centre['y']]
