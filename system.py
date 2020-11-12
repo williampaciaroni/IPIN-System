@@ -151,11 +151,12 @@ def points_no_mle():
 
 def points_clustering():
     points = []
-    for t in time_beacons:
+    for t in range(len(time_beacons)):
+        pos,dist = position_distances(t)
         try:
-            v = cluster.plot(t['beacons'])
+            v = cluster.plot(np.array(pos),np.array(dist))
             if v[0]!=0 and v[1]!=0:
-                points.append(v)
+                points.append({'point':[v[0],v[1]],'time':time_beacons[t]['time']})
         except:
             pass
     return points
@@ -172,7 +173,6 @@ filterBeacons()
 ptrian = points_mle()
 ptrian_nomle = points_no_mle()
 pcluster = points_clustering()
-
 ppmle = []
 
 for p in ptrian:
@@ -198,6 +198,7 @@ for p in pcluster:
                 ppcluster.append(p)
 
 prev_point = None
+
 def animatemle(dot):
     global prev_point
     d = ppmle[dot]
@@ -225,10 +226,10 @@ def animatecluster(dot):
         mp.plt.plot([prev_point[0], d['point'][0]], [prev_point[1], d['point'][1]],color='green')
     prev_point = d['point']   
 
-anim_mle = FuncAnimation(mp.fig, animatemle, interval=500, frames=len(ppmle)-1)
+#anim_mle = FuncAnimation(mp.fig, animatemle, interval=500, frames=len(ppmle)-1)
 
  
-#anim_no_mle = FuncAnimation(mp.fig, animatenomle, interval=500, frames=len(ppnomle)-1)
+anim_no_mle = FuncAnimation(mp.fig, animatenomle, interval=500, frames=len(ppnomle)-1)
 
 #anim_cluster = FuncAnimation(mp.fig, animatecluster, interval=500, frames=len(ppcluster)-1)
 
